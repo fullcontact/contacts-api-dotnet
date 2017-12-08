@@ -2,6 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <RootNamespace>FullContact.Contacts.API</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Responses\" />
+    <Folder Include="Requests\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Fields\" />
+    <Folder Include="Requests\Contacts\" />
+    <Folder Include="Requests\Tags\" />
+    <Folder Include="Requests\Webhooks\" />
+    <Folder Include="Responses\Contacts\" />
+    <Folder Include="Responses\Tags\" />
+    <Folder Include="Responses\Teams\" />
+    <Folder Include="Responses\Webhooks\" />
+  </ItemGroup>
 </Project>
