@@ -1,61 +1,59 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="contacts-api-dotnet/Client.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="contacts-api-dotnet/API.cs">
     <Files>
-      <File FileName="contacts-api-dotnet/API.cs" Line="21" Column="1" />
-      <File FileName="contacts-api-dotnet/OAuth.cs" Line="9" Column="9" />
-      <File FileName="contacts-api-dotnet/Responses/APIResponse.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Requests/APIRequest.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Models/Address.cs" Line="12" Column="51" />
-      <File FileName="contacts-api-dotnet/Models/DateField.cs" Line="9" Column="6" />
-      <File FileName="contacts-api-dotnet/Models/DateFieldWithType.cs" Line="6" Column="40" />
-      <File FileName="contacts-api-dotnet/Models/Name.cs" Line="10" Column="42" />
-      <File FileName="contacts-api-dotnet/Models/Organization.cs" Line="12" Column="47" />
-      <File FileName="contacts-api-dotnet/Models/StandardField.cs" Line="7" Column="42" />
-      <File FileName="contacts-api-dotnet/Models/URLField.cs" Line="9" Column="42" />
-      <File FileName="contacts-api-dotnet/Models/Account.cs" Line="11" Column="2" />
-      <File FileName="contacts-api-dotnet/Models/ContactData.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Models/Authorization.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Models/Contact.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Models/ContactMetadata.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Models/Tag.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Models/TagData.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Models/Team.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Models/TeamData.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Models/Webhook.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet/Requests/CreateContactRequest.cs" Line="11" Column="1" />
-      <File FileName="contacts-api-dotnet/Requests/DeleteContactRequest.cs" Line="4" Column="39" />
-      <File FileName="contacts-api-dotnet/Requests/GetContactsRequest.cs" Line="6" Column="49" />
-      <File FileName="contacts-api-dotnet/Requests/ManageTagsRequest.cs" Line="6" Column="48" />
-      <File FileName="contacts-api-dotnet/Requests/ScrollContactsRequest.cs" Line="4" Column="52" />
-      <File FileName="contacts-api-dotnet/Requests/SearchContactsRequest.cs" Line="6" Column="52" />
-      <File FileName="contacts-api-dotnet/Requests/UpdateContactRequest.cs" Line="9" Column="1" />
-      <File FileName="contacts-api-dotnet/Requests/CreateTagRequest.cs" Line="9" Column="6" />
-      <File FileName="contacts-api-dotnet/Requests/DeleteTagRequest.cs" Line="5" Column="6" />
-      <File FileName="contacts-api-dotnet/Requests/GetTagsRequest.cs" Line="8" Column="48" />
-      <File FileName="contacts-api-dotnet/Requests/ScrollTagsRequest.cs" Line="8" Column="49" />
-      <File FileName="contacts-api-dotnet/Requests/UpdateTagRequest.cs" Line="5" Column="6" />
-      <File FileName="contacts-api-dotnet/Requests/CreateWebhookRequest.cs" Line="12" Column="1" />
-      <File FileName="contacts-api-dotnet/Requests/DeleteWebhookRequest.cs" Line="9" Column="1" />
-      <File FileName="contacts-api-dotnet/Requests/GetWebhookBatchesRequest.cs" Line="7" Column="43" />
-      <File FileName="contacts-api-dotnet/Requests/GetWebhooksRequest.cs" Line="9" Column="38" />
-      <File FileName="contacts-api-dotnet/Requests/SearchWebhooksRequest.cs" Line="10" Column="52" />
-      <File FileName="contacts-api-dotnet/Responses/ContactResponseBody.cs" Line="11" Column="1" />
-      <File FileName="contacts-api-dotnet/Requests/Webhooks/CreateWebhookRequest.cs" Line="11" Column="2" />
-      <File FileName="contacts-api-dotnet/Requests/Webhooks/DeleteWebhookRequest.cs" Line="9" Column="1" />
-      <File FileName="contacts-api-dotnet/Responses/Contacts/ContactsResponseBody.cs" Line="4" Column="1" />
-      <File FileName="contacts-api-dotnet/Responses/Tags/TagResponseBody.cs" Line="8" Column="19" />
-      <File FileName="contacts-api-dotnet/Responses/Tags/TagsResponseBody.cs" Line="10" Column="43" />
-      <File FileName="contacts-api-dotnet/Responses/Teams/TeamsResponseBody.cs" Line="4" Column="1" />
+      <File FileName="contacts-api-dotnet/API.cs" Line="65" Column="39" />
+      <File FileName="contacts-api-dotnet/OAuth.cs" Line="17" Column="36" />
+      <File FileName="contacts-api-dotnet/Responses/APIResponse.cs" Line="7" Column="21" />
+      <File FileName="contacts-api-dotnet/Requests/APIRequest.cs" Line="2" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/Account.cs" Line="9" Column="29" />
+      <File FileName="contacts-api-dotnet/Models/ContactData.cs" Line="19" Column="37" />
+      <File FileName="contacts-api-dotnet/Models/Authorization.cs" Line="10" Column="24" />
+      <File FileName="contacts-api-dotnet/Models/Contact.cs" Line="15" Column="33" />
+      <File FileName="contacts-api-dotnet/Models/ContactMetadata.cs" Line="10" Column="30" />
+      <File FileName="contacts-api-dotnet/Models/Tag.cs" Line="13" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/TagData.cs" Line="6" Column="24" />
+      <File FileName="contacts-api-dotnet/Models/Team.cs" Line="12" Column="27" />
+      <File FileName="contacts-api-dotnet/Models/TeamData.cs" Line="6" Column="24" />
+      <File FileName="contacts-api-dotnet/Models/Webhook.cs" Line="15" Column="1" />
+      <File FileName="contacts-api-dotnet/Requests/Webhooks/CreateWebhookRequest.cs" Line="9" Column="30" />
+      <File FileName="contacts-api-dotnet/Requests/Webhooks/DeleteWebhookRequest.cs" Line="6" Column="24" />
+      <File FileName="contacts-api-dotnet/Responses/Contacts/ContactsResponseBody.cs" Line="10" Column="24" />
+      <File FileName="contacts-api-dotnet/Responses/Tags/TagResponseBody.cs" Line="8" Column="21" />
+      <File FileName="contacts-api-dotnet/Responses/Tags/TagsResponseBody.cs" Line="11" Column="6" />
+      <File FileName="contacts-api-dotnet/Responses/Teams/TeamsResponseBody.cs" Line="9" Column="28" />
       <File FileName="contacts-api-dotnet/Responses/Webhooks/BatchesResponseBody.cs" Line="6" Column="9" />
-      <File FileName="contacts-api-dotnet/Responses/Webhooks/TriggersResponseBody.cs" Line="11" Column="1" />
-      <File FileName="contacts-api-dotnet/Responses/Webhooks/WebhookResponseBody.cs" Line="9" Column="6" />
-      <File FileName="contacts-api-dotnet/Responses/Webhooks/WebhooksResponseBody.cs" Line="9" Column="52" />
+      <File FileName="contacts-api-dotnet/Responses/Webhooks/TriggersResponseBody.cs" Line="8" Column="30" />
+      <File FileName="contacts-api-dotnet/Responses/Webhooks/WebhookResponseBody.cs" Line="8" Column="25" />
+      <File FileName="contacts-api-dotnet/Responses/Webhooks/WebhooksResponseBody.cs" Line="9" Column="31" />
       <File FileName="contacts-api-dotnet/Account.cs" Line="13" Column="1" />
       <File FileName="contacts-api-dotnet/Contacts.cs" Line="8" Column="24" />
       <File FileName="contacts-api-dotnet/Tags.cs" Line="8" Column="20" />
       <File FileName="contacts-api-dotnet/Teams.cs" Line="8" Column="21" />
       <File FileName="contacts-api-dotnet/Webhooks.cs" Line="13" Column="1" />
-      <File FileName="contacts-api-dotnet/Client.cs" Line="6" Column="23" />
+      <File FileName="contacts-api-dotnet/Client.cs" Line="81" Column="14" />
+      <File FileName="contacts-api-dotnet/Responses/Contacts/ContactResponseBody.cs" Line="8" Column="25" />
+      <File FileName="contacts-api-dotnet/Requests/Contacts/CreateContactRequest.cs" Line="8" Column="25" />
+      <File FileName="contacts-api-dotnet/Requests/Contacts/DeleteContactRequest.cs" Line="7" Column="25" />
+      <File FileName="contacts-api-dotnet/Requests/Contacts/GetContactsRequest.cs" Line="8" Column="30" />
+      <File FileName="contacts-api-dotnet/Requests/Contacts/ManageTagsRequest.cs" Line="10" Column="30" />
+      <File FileName="contacts-api-dotnet/Requests/Contacts/ScrollContactsRequest.cs" Line="8" Column="24" />
+      <File FileName="contacts-api-dotnet/Requests/Contacts/SearchContactsRequest.cs" Line="10" Column="30" />
+      <File FileName="contacts-api-dotnet/Requests/Contacts/UpdateContactRequest.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Requests/Tags/CreateTagRequest.cs" Line="8" Column="21" />
+      <File FileName="contacts-api-dotnet/Requests/Tags/DeleteTagRequest.cs" Line="7" Column="24" />
+      <File FileName="contacts-api-dotnet/Requests/Tags/GetTagsRequest.cs" Line="8" Column="30" />
+      <File FileName="contacts-api-dotnet/Requests/Tags/ScrollTagsRequest.cs" Line="8" Column="24" />
+      <File FileName="contacts-api-dotnet/Requests/Tags/UpdateTagRequest.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Requests/Webhooks/GetWebhookBatchesRequest.cs" Line="7" Column="24" />
+      <File FileName="contacts-api-dotnet/Requests/Webhooks/GetWebhooksRequest.cs" Line="9" Column="22" />
+      <File FileName="contacts-api-dotnet/Requests/Webhooks/SearchWebhooksRequest.cs" Line="10" Column="30" />
+      <File FileName="contacts-api-dotnet/Models/Fields/Address.cs" Line="12" Column="24" />
+      <File FileName="contacts-api-dotnet/Models/Fields/DateField.cs" Line="8" Column="22" />
+      <File FileName="contacts-api-dotnet/Models/Fields/DateFieldWithType.cs" Line="6" Column="24" />
+      <File FileName="contacts-api-dotnet/Models/Fields/Name.cs" Line="10" Column="24" />
+      <File FileName="contacts-api-dotnet/Models/Fields/Organization.cs" Line="12" Column="27" />
+      <File FileName="contacts-api-dotnet/Models/Fields/StandardField.cs" Line="7" Column="24" />
+      <File FileName="contacts-api-dotnet/Models/Fields/URLField.cs" Line="7" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

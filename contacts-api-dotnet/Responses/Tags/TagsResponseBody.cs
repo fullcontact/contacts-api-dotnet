@@ -6,7 +6,7 @@ namespace FullContact.Contacts.API.Responses.Tags
 {
     public class TagsResponseBody
     {
-        public List<Tag> tags { get; set; }
-        public String cursor { get; set; }
+        public List<Tag> Tags { get; set; }
+        public String Cursor { get; set; }
     }
 }

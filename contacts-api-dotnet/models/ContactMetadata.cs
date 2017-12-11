@@ -5,8 +5,8 @@ namespace FullContact.Contacts.API.Models
 {
     public class ContactMetadata
     {
-        public String businessCardTranscriptionStatus { get; set; }
-        public Boolean? companyContact { get; set; }
-        public List<String> tagIds { get; set; }
+        public String BusinessCardTranscriptionStatus { get; set; }
+        public Boolean? CompanyContact { get; set; }
+        public List<String> TagIds { get; set; }
     }
 }

@@ -3,12 +3,12 @@ namespace FullContact.Contacts.API.Models.Fields
 {
     public class Organization
     {
-        public String name { get; set; }
-        public String department { get; set; }
-        public String title { get; set; }
-        public String location { get; set; }
-        public String description { get; set; }
-        public DateField startDate { get; set; }
-        public DateField endDate { get; set; }
+        public String Name { get; set; }
+        public String Department { get; set; }
+        public String Title { get; set; }
+        public String Location { get; set; }
+        public String Description { get; set; }
+        public DateField StartDate { get; set; }
+        public DateField EndDate { get; set; }
     }
 }

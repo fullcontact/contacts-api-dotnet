@@ -3,7 +3,7 @@ namespace FullContact.Contacts.API.Requests.Webhooks
 {
     public class GetWebhookBatchesRequest : APIRequest
     {
-        public String webhookId { get; set; }
-        public String batchId { get; set; }
+        public String WebhookId { get; set; }
+        public String BatchId { get; set; }
     }
 }

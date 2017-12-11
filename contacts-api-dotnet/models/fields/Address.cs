@@ -3,12 +3,12 @@ namespace FullContact.Contacts.API.Models.Fields
 {
     public class Address
     {
-        public String type { get; set; }
-        public String street { get; set; }
-        public String city { get; set; }
-        public String region { get; set; }
-        public String postalCode { get; set; }
-        public String country { get; set; }
-        public String extendedAddress { get; set; }
+        public String Type { get; set; }
+        public String Street { get; set; }
+        public String City { get; set; }
+        public String Region { get; set; }
+        public String PostalCode { get; set; }
+        public String Country { get; set; }
+        public String ExtendedAddress { get; set; }
     }
 }

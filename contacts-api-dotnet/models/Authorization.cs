@@ -3,10 +3,10 @@ namespace FullContact.Contacts.API.Models
 {
     public class Authorization
     {
-        public String accessToken { get; set; }
-        public String refreshToken { get; set; }
-        public DateTime accessTokenExpiration { get; set; }
-        public DateTime refreshTokenExpiration { get; set; }
-        public String scope { get; set; }
+        public String AccessToken { get; set; }
+        public String RefreshToken { get; set; }
+        public DateTime AccessTokenExpiration { get; set; }
+        public DateTime RefreshTokenExpiration { get; set; }
+        public String Scope { get; set; }
     }
 }

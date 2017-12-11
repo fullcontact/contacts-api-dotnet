@@ -6,7 +6,7 @@ namespace FullContact.Contacts.API.Responses.Contacts
 {
     public class ContactsResponseBody
     {
-        public List<Contact> contacts { get; set; }
-        public String cursor { get; set; }
+        public List<Contact> Contacts { get; set; }
+        public String Cursor { get; set; }
     }
 }

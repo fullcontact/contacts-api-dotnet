@@ -5,7 +5,7 @@ namespace FullContact.Contacts.API.Requests.Webhooks
 {
     public class CreateWebhookRequest : APIRequest
     {
-        public String url { get; set; }
-        public List<String> triggerIds { get; set; }
+        public String Url { get; set; }
+        public List<String> TriggerIds { get; set; }
     }
 }

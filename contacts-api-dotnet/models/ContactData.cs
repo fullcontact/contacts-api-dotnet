@@ -6,16 +6,16 @@ namespace FullContact.Contacts.API.Models
 {
     public class ContactData
     {
-        public List<Address> addresses { get; set; }
-        public DateField birthday { get; set; }
-        public List<DateFieldWithType> dates { get; set; }
-        public List<StandardField> emails { get; set; }
-        public Name name { get; set; }
-        public List<StandardField> relatedPeople { get; set; }
-        public List<Organization> organizations { get; set; }
-        public List<StandardField> phoneNumbers { get; set; }
-        public List<URLField> urls { get; set; }
-        public String notes { get; set; }
-        public List<StandardField> ims { get; set; }
+        public List<Address> Addresses { get; set; }
+        public DateField Birthday { get; set; }
+        public List<DateFieldWithType> Dates { get; set; }
+        public List<StandardField> Emails { get; set; }
+        public Name Name { get; set; }
+        public List<StandardField> RelatedPeople { get; set; }
+        public List<Organization> Organizations { get; set; }
+        public List<StandardField> PhoneNumbers { get; set; }
+        public List<URLField> Urls { get; set; }
+        public String Notes { get; set; }
+        public List<StandardField> Ims { get; set; }
     }
 }

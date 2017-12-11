@@ -6,6 +6,6 @@ namespace FullContact.Contacts.API.Responses.Teams
 {
     public class TeamsResponseBody
     {
-        public List<Team> teams { get; set; }
+        public List<Team> Teams { get; set; }
     }
 }

@@ -3,10 +3,10 @@ namespace FullContact.Contacts.API.Models.Fields
 {
     public class Name
     {
-        public String givenName { get; set; }
-        public String familyName { get; set; }
-        public String middleName { get; set; }
-        public String prefix { get; set; }
-        public String suffix { get; set; }
+        public String GivenName { get; set; }
+        public String FamilyName { get; set; }
+        public String MiddleName { get; set; }
+        public String Prefix { get; set; }
+        public String Suffix { get; set; }
     }
 }

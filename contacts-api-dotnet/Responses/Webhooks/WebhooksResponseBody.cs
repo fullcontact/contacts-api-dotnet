@@ -6,6 +6,6 @@ namespace FullContact.Contacts.API.Responses.Webhooks
 {
     public class WebhooksResponseBody
     {
-        public List<Webhook> webhooks { get; set; }        
+        public List<Webhook> Webhooks { get; set; }        
     }
 }

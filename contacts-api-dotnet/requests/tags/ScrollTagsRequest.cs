@@ -3,8 +3,8 @@ namespace FullContact.Contacts.API.Requests.Tags
 {
     public class ScrollTagsRequest : APIRequest
     {
-        public int? size { get; set; }
-        public Boolean? includeDeletedTags { get; set; }
-        public String scrollCursor { get; set; }
+        public int? Size { get; set; }
+        public Boolean? IncludeDeletedTags { get; set; }
+        public String ScrollCursor { get; set; }
     }
 }

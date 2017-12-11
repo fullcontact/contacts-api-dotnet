@@ -5,8 +5,8 @@ namespace FullContact.Contacts.API.Requests.Webhooks
 {
     public class SearchWebhooksRequest : APIRequest
     {
-        public String url { get; set; }
-        public int? page { get; set; }
-        public List<String> triggerIds { get; set; }
+        public String Url { get; set; }
+        public int? Page { get; set; }
+        public List<String> TriggerIds { get; set; }
     }
 }

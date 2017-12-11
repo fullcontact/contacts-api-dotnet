@@ -5,6 +5,6 @@ namespace FullContact.Contacts.API.Requests.Tags
 {
     public class CreateTagRequest : APIRequest
     {
-        public Tag tag { get; set; }
+        public Tag Tag { get; set; }
     }
 }

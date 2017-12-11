@@ -3,6 +3,6 @@ namespace FullContact.Contacts.API.Models
 {
     public class TeamData
     {
-        public String name { get; set; }
+        public String Name { get; set; }
     }
 }

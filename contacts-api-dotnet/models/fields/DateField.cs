@@ -3,8 +3,8 @@ namespace FullContact.Contacts.API.Models.Fields
 {
     public class DateField
     {
-        public int? month { get; set; }
-        public int? day { get; set; }
-        public int? year { get; set; }
+        public int? Month { get; set; }
+        public int? Day { get; set; }
+        public int? Year { get; set; }
     }
 }

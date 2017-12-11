@@ -3,10 +3,10 @@ namespace FullContact.Contacts.API.Models
 {
     public class Tag
     {
-        public String tagId { get; set; }
-        public TagData tagData { get; set; }
-        public String etag { get; set; }
-        public DateTime? created { get; set; }
-        public DateTime? updated { get; set; }
+        public String TagId { get; set; }
+        public TagData TagData { get; set; }
+        public String Etag { get; set; }
+        public DateTime? Created { get; set; }
+        public DateTime? Updated { get; set; }
     }
 }

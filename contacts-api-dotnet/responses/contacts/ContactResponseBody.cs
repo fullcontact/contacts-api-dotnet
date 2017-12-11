@@ -5,6 +5,6 @@ namespace FullContact.Contacts.API.Responses.Contacts
 {
     public class ContactResponseBody
     {
-        public Contact contact { get; set; }
+        public Contact Contact { get; set; }
     }
 }

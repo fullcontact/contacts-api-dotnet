@@ -5,10 +5,10 @@ namespace FullContact.Contacts.API.Models
 {
     public class Team
     {
-        public String teamId { get; set; }
-        public TeamData teamData { get; set; }
-        public List<String> teamMembers { get; set; }
-        public DateTime? created { get; set; }
-        public DateTime? updated { get; set; }
+        public String TeamId { get; set; }
+        public TeamData TeamData { get; set; }
+        public List<String> TeamMembers { get; set; }
+        public DateTime? Created { get; set; }
+        public DateTime? Updated { get; set; }
     }
 }

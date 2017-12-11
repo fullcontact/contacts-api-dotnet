@@ -5,6 +5,6 @@ namespace FullContact.Contacts.API.Responses.Tags
 {
     public class TagResponseBody
     {
-        public Tag tag { get; set; }
+        public Tag Tag { get; set; }
     }
 }

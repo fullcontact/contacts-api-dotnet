@@ -5,6 +5,6 @@ namespace FullContact.Contacts.API.Requests.Contacts
 {
     public class CreateContactRequest : APIRequest
     {
-        public Contact contact { get; set; }
+        public Contact Contact { get; set; }
     }
 }

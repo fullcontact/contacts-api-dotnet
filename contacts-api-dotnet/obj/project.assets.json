@@ -4473,7 +4473,8 @@
     ]
   },
   "packageFolders": {
-    "/Users/mattdelliott/.nuget/packages/": {}
+    "/Users/mattdelliott/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4484,6 +4485,9 @@
       "packagesPath": "/Users/mattdelliott/.nuget/packages/",
       "outputPath": "/Users/mattdelliott/Development/FullContact/contacts-api-dotnet/contacts-api-dotnet/obj",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "/Users/mattdelliott/.config/NuGet/NuGet.Config"
       ],
@@ -4497,12 +4501,18 @@
         "netstandard1.4": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
       "netstandard1.4": {
         "dependencies": {
           "NETStandard.Library": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "1.6.1",
             "autoReferenced": true

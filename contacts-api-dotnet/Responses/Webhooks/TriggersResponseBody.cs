@@ -5,6 +5,6 @@ namespace FullContact.Contacts.API.Responses.Webhooks
 {
     public class TriggersResponseBody
     {
-        public List<String> triggers { get; set; }
+        public List<String> Triggers { get; set; }
     }
 }

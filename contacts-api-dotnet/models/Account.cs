@@ -3,9 +3,9 @@ namespace FullContact.Contacts.API.Models
 {
     public class Account
     {
-        public String accountId { get; set; }
-        public DateTime? created { get; set; }
-        public DateTime? updated { get; set; }
-        public ContactData profileData { get; set; }
+        public String AccountId { get; set; }
+        public DateTime? Created { get; set; }
+        public DateTime? Updated { get; set; }
+        public ContactData ProfileData { get; set; }
     }
 }
