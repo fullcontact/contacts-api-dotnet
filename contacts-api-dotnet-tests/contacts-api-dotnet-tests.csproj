@@ -5,6 +5,7 @@
 
     <IsPackable>false</IsPackable>
     <RootNamespace>FullContact.Contacts.API.Tests</RootNamespace>
+    <ReleaseVersion>1.0</ReleaseVersion>
   </PropertyGroup>
 
   <ItemGroup>

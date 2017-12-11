@@ -20,4 +20,11 @@ Global
 		{4AA73FE0-7DF4-48D2-AE1C-2D1E1F006483}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AA73FE0-7DF4-48D2-AE1C-2D1E1F006483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.VersionControlPolicy = $2
+		version = 1.0
+	EndGlobalSection
 EndGlobal

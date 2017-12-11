@@ -72,7 +72,7 @@ namespace FullContact.Contacts.API
             return await this.RequestAsync<ContactsResponseBody>(
                 accessToken,
                 HttpMethod.Post,
-                "/api/v1/contacts.scroll",
+                "/api/v1/contacts.search",
                 new SearchContactsRequest
                 {
                     TeamId = teamId,

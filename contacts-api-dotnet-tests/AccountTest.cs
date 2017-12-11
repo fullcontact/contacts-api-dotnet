@@ -19,13 +19,14 @@ namespace FullContact.Contacts.API.Tests
         public async void TestGet()
         {
             String accessToken = this.RandomString();
+            String accountId = this.RandomString();
             MockAPI<Account> mock = this.MockFor<Account>(
                 HttpMethod.Post,
                 "/api/v1/account.get",
-                m => m.WithContent("{}").Respond("application/json", "{}")
+                m => m.WithContent("{}").Respond("application/json", "{ \"accountId\": \""+ accountId +"\"}")
             );
             APIResponse<Models.Account> res = await mock.Instance.Get(accessToken);
-
+            Assert.Equal(res.Body.AccountId, accountId);
             mock.Handler.VerifyNoOutstandingExpectation();
         }
     }

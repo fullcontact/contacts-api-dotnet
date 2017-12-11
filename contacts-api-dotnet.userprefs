@@ -1,21 +1,18 @@
 ﻿<Properties StartupConfiguration="{4AA73FE0-7DF4-48D2-AE1C-2D1E1F006483}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="contacts-api-dotnet/Requests/APIRequest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="contacts-api-dotnet/Models/Contact.cs">
     <Files>
-      <File FileName="contacts-api-dotnet-tests/MockAPI.cs" Line="1" Column="1" />
-      <File FileName="contacts-api-dotnet-tests/AccountTest.cs" Line="2" Column="1" />
-      <File FileName="contacts-api-dotnet-tests/APITestBase.cs" Line="38" Column="59" />
-      <File FileName="contacts-api-dotnet-tests/APIRequestTest.cs" Line="12" Column="13" />
-      <File FileName="contacts-api-dotnet/Requests/APIRequest.cs" Line="14" Column="22" />
-      <File FileName="contacts-api-dotnet/API.cs" Line="60" Column="114" />
-      <File FileName="contacts-api-dotnet/Client.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Contacts.cs" Line="11" Column="35" />
+      <File FileName="contacts-api-dotnet/Models/Account.cs" Line="12" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/Authorization.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/Contact.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/ContactData.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/ContactMetadata.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/Tag.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/TagData.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/Team.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/TeamData.cs" Line="1" Column="1" />
+      <File FileName="contacts-api-dotnet/Models/Webhook.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="contacts-api-dotnet" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.contacts-api-dotnet-tests PreferredExecutionTarget="MonoDevelop.Default" />
@@ -23,5 +20,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <AuthorInfo Name="FullContact" Email="support@fullcontat.com" Copyright="2018 FullContact" Company="FullContact" Trademark="" />
   <MultiItemStartupConfigurations />
 </Properties>
