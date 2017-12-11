@@ -13,6 +13,10 @@ namespace FullContact.Contacts.API
         {
         }
 
+        public Account(IDictionary<string, object> config, HttpClient client) : base(config, client)
+        {
+        }
+
         public async Task<APIResponse<Models.Account>> Get(String accessToken) {
             return await this.RequestAsync<Models.Account>(
                 accessToken,

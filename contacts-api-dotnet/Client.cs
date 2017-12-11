@@ -32,7 +32,7 @@ namespace FullContact.Contacts.API
 
             if (!this.config.ContainsKey("userAgent"))
             {
-                this.config.Add("userAgent", "contacts-api-java");
+                this.config.Add("userAgent", "contacts-api-dotnet");
             }
 
             this._contacts = new Contacts(this.config);

@@ -16,6 +16,10 @@ namespace FullContact.Contacts.API
         {
         }
 
+        public Contacts(IDictionary<string, object> config, HttpClient client) : base(config, client)
+        {
+        }
+
         public async Task<APIResponse<ContactsResponseBody>> Get(String accessToken, List<String> contactIds, String teamId)
         {
             return await this.RequestAsync<ContactsResponseBody>(

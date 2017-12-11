@@ -14,6 +14,10 @@ namespace FullContact.Contacts.API
         {
         }
 
+        public Teams(IDictionary<string, object> config, HttpClient client) : base(config, client)
+        {
+        }
+
         public async Task<APIResponse<Team>> Get(String accessToken)
         {
             return await this.RequestAsync<Team>(

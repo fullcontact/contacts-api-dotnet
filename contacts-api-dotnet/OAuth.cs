@@ -14,6 +14,10 @@ namespace FullContact.Contacts.API
         {
         }
 
+        public OAuth(IDictionary<string, object> config, HttpClient client) : base(config, client)
+        {
+        }
+
         public String getAuthorizationUrl(List<String> scopes, String redirectUri, String state) {
             return String.Format(
                 "{0}/oauth/authorize?client_id={1}&scopes={2}&redirect_uri={3}&state={4}",

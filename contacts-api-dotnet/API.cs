@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Linq;
 using FullContact.Contacts.API.Responses;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace FullContact.Contacts.API
 {
@@ -22,13 +23,22 @@ namespace FullContact.Contacts.API
         public API(IDictionary<String, Object> config) 
         {
             this._config = config;
-            this._baseUrl = (String)config["apiUrl"];
-            this._clientId = (String)config["clientId"];
-            this._clientSecret = (String)config["clientSecret"];
-            this._userAgent = (String)config["userAgent"];
 
-            if(String.IsNullOrWhiteSpace(this._userAgent)) {
-                this._userAgent = "Contacts API SDK (.NET)";    
+            if(config.ContainsKey("apiUrl")) {
+                this._baseUrl = (String)config["apiUrl"];    
+            }
+
+
+            if(config.ContainsKey("clientId")) {
+                this._clientId = (String)config["clientId"];    
+            }
+
+            if(config.ContainsKey("clientSecret")) {
+                this._clientSecret = (String)config["clientSecret"];    
+            }
+
+            if(config.ContainsKey("userAgent")) {
+                this._userAgent = (String)config["userAgent"];    
             }
 
             this._client = new HttpClient();
@@ -39,34 +49,24 @@ namespace FullContact.Contacts.API
             };
         }
 
+        public API(IDictionary<String, Object> config, HttpClient client) : this(config)
+        {
+            this._client = client;
+        }
+
         protected async Task<APIResponse<T>> RequestAsync<T>(String accessToken, HttpMethod method, String uri, Dictionary<String, String> form, Dictionary<String, IEnumerable<String>> headers) where T : class
         {
-            String body = String.Join("&", form.Select(pair => String.Format("{0}={1}", pair.Key, Uri.EscapeUriString(pair.Value))));
-
-            if(headers == null) {
-                headers = new Dictionary<string, IEnumerable<string>>();
-            }
-
-            headers.Add("Content-Type", new List<String> {"application/x-www-form-urlencoded"});
-
+            StringContent body = new StringContent(String.Join("&", form.Select(pair => String.Format("{0}={1}", pair.Key, Uri.EscapeUriString(pair.Value)))), Encoding.UTF8, "application/x-www-form-urlencoded");
             return await this.RequestAsync<T>(accessToken, method, uri, body, headers);
         }
 
         protected async Task<APIResponse<T>> RequestAsync<T>(String accessToken, HttpMethod method, String uri, Object obj, Dictionary<String, IEnumerable<String>> headers) where T : class
         {
-            String body = JsonConvert.SerializeObject(obj);
-
-            if (headers == null)
-            {
-                headers = new Dictionary<string, IEnumerable<string>>();
-            }
-
-            headers.Add("Content-Type", new List<String> { "application/json" });
-
+            StringContent body = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
             return await this.RequestAsync<T>(accessToken, method, uri, body, headers);
         }
 
-        protected async Task<APIResponse<T>> RequestAsync<T>(String accessToken, HttpMethod method, String uri, String body, Dictionary<String, IEnumerable<String>> headers) where T : class
+        protected async Task<APIResponse<T>> RequestAsync<T>(String accessToken, HttpMethod method, String uri, StringContent body, Dictionary<String, IEnumerable<String>> headers) where T : class
         {
             HttpRequestMessage req = new HttpRequestMessage();
             req.Method = method;
@@ -80,15 +80,25 @@ namespace FullContact.Contacts.API
                 req.Headers.Add("Authorization", new String[] { "Bearer " + accessToken });
             }
 
-            if(!String.IsNullOrWhiteSpace(body)) {
-                req.Content = new StringContent(body);    
+            if(body != null) {
+                req.Content = body;    
             }
 
-            req.Headers.Add("User-Agent", this._userAgent);
+            if(this._userAgent != null) {
+                req.Headers.Add("User-Agent", this._userAgent);    
+            }
 
             HttpResponseMessage r = await this._client.SendAsync(req);
             APIResponse<T> res = new APIResponse<T>();
-            res.Body = JsonConvert.DeserializeObject<T>(r.Content.ToString(), this._mapperSettings);
+
+            if(r.Content != null) {
+                String content = await r.Content.ReadAsStringAsync();
+                if (!String.IsNullOrWhiteSpace(content))
+                {
+                    res.Body = JsonConvert.DeserializeObject<T>(content, this._mapperSettings);
+                }    
+            }
+
             res.Status = r.StatusCode;
             res.Headers = r.Headers;
             return res;

@@ -16,6 +16,10 @@ namespace FullContact.Contacts.API
         {
         }
 
+        public Webhooks(IDictionary<string, object> config, HttpClient client) : base(config, client)
+        {
+        }
+
         public async Task<APIResponse<WebhooksResponseBody>> Get(String accessToken, List<String> webhookIds, int? page, String teamId)
         {
             return await this.RequestAsync<WebhooksResponseBody>(

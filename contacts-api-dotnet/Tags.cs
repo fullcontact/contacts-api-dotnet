@@ -16,6 +16,10 @@ namespace FullContact.Contacts.API
         {
         }
 
+        public Tags(IDictionary<string, object> config, HttpClient client) : base(config, client)
+        {
+        }
+
         public async Task<APIResponse<TagsResponseBody>> Get(String accessToken, List<String> tagIds, String teamId)
         {
             return await this.RequestAsync<TagsResponseBody>(
