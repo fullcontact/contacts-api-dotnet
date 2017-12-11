@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contacts-api-dotnet", "contacts-api-dotnet\contacts-api-dotnet.csproj", "{8028A46B-4E26-436C-B48E-C06C6C3B4AA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contacts-api-dotnet-tests", "contacts-api-dotnet-tests\contacts-api-dotnet-tests.csproj", "{4AA73FE0-7DF4-48D2-AE1C-2D1E1F006483}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{8028A46B-4E26-436C-B48E-C06C6C3B4AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8028A46B-4E26-436C-B48E-C06C6C3B4AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8028A46B-4E26-436C-B48E-C06C6C3B4AA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA73FE0-7DF4-48D2-AE1C-2D1E1F006483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA73FE0-7DF4-48D2-AE1C-2D1E1F006483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA73FE0-7DF4-48D2-AE1C-2D1E1F006483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA73FE0-7DF4-48D2-AE1C-2D1E1F006483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

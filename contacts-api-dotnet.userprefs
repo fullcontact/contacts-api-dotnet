@@ -1,13 +1,15 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="contacts-api-dotnet/API.cs">
+﻿<Properties StartupConfiguration="{4AA73FE0-7DF4-48D2-AE1C-2D1E1F006483}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="contacts-api-dotnet-tests/UnitTest1.cs">
     <Files>
       <File FileName="contacts-api-dotnet/Tags.cs" Line="96" Column="34" />
       <File FileName="contacts-api-dotnet/Contacts.cs" Line="28" Column="10" />
-      <File FileName="contacts-api-dotnet/Webhooks.cs" Line="28" Column="10" />
-      <File FileName="contacts-api-dotnet/API.cs" Line="19" Column="26" />
+      <File FileName="contacts-api-dotnet/Webhooks.cs" Line="79" Column="33" />
+      <File FileName="contacts-api-dotnet/API.cs" Line="87" Column="60" />
+      <File FileName="contacts-api-dotnet-tests/UnitTest1.cs" Line="6" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.contacts-api-dotnet-tests PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
