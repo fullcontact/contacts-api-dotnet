@@ -212,11 +212,127 @@ namespace FullContact.Contacts.API.Tests
                 HttpMethod.Post,
                 "/api/v1/contacts.create",
                 m => m.WithContent(req.ToString())
-                .Respond("application/json", "{ \"contact\": {\"notes\":\"Testing\"}")
+                .Respond("application/json", req.ToString())
             );
 
             APIResponse<ContactResponseBody> res = await mock.Instance.Create(accessToken, contact, null);
             mock.Handler.VerifyNoOutstandingExpectation();
+            Assert.Equal(contact.ContactData.Notes, res.Body.Contact.ContactData.Notes);
+        }
+
+        [Fact]
+        public async void TestCreateWithTeam()
+        {
+            String accessToken = this.RandomString();
+            String teamId = this.RandomString();
+            Models.Contact contact = new Models.Contact();
+            contact.ContactData = new Models.ContactData();
+            contact.ContactData.Name = new Models.Fields.Name();
+            contact.ContactData.Name.FamilyName = this.RandomString();
+            CreateContactRequest req = new CreateContactRequest();
+            req.Contact = contact;
+            req.TeamId = teamId;
+            MockAPI<Contacts> mock = this.MockFor<Contacts>(
+                HttpMethod.Post,
+                "/api/v1/contacts.create",
+                m => m.WithContent(req.ToString())
+                .Respond("application/json", req.ToString())
+            );
+
+            APIResponse<ContactResponseBody> res = await mock.Instance.Create(accessToken, contact, teamId);
+            mock.Handler.VerifyNoOutstandingExpectation();
+            Assert.Equal(contact.ContactData.Name.FamilyName, res.Body.Contact.ContactData.Name.FamilyName);
+        }
+
+        [Fact]
+        public async void TestUpdate()
+        {
+            String accessToken = this.RandomString();
+            Models.Contact contact = new Models.Contact();
+            contact.ContactId = this.RandomString();
+            contact.ContactData = new Models.ContactData();
+            contact.ContactData.Notes = this.RandomString();
+            UpdateContactRequest req = new UpdateContactRequest();
+            req.Contact = contact;
+            MockAPI<Contacts> mock = this.MockFor<Contacts>(
+                HttpMethod.Post,
+                "/api/v1/contacts.update",
+                m => m.WithContent(req.ToString())
+                .Respond("application/json", req.ToString())
+            );
+
+            APIResponse<ContactResponseBody> res = await mock.Instance.Update(accessToken, contact, null);
+            mock.Handler.VerifyNoOutstandingExpectation();
+            Assert.Equal(contact.ContactId, res.Body.Contact.ContactId);
+        }
+
+        [Fact]
+        public async void TestUpdateWithTeam()
+        {
+            String accessToken = this.RandomString();
+            String teamId = this.RandomString();
+            Models.Contact contact = new Models.Contact();
+            contact.ContactData = new Models.ContactData();
+            contact.ContactId = this.RandomString();
+            contact.ContactData.Name = new Models.Fields.Name();
+            contact.ContactData.Name.FamilyName = this.RandomString();
+            UpdateContactRequest req = new UpdateContactRequest();
+            req.Contact = contact;
+            req.TeamId = teamId;
+            MockAPI<Contacts> mock = this.MockFor<Contacts>(
+                HttpMethod.Post,
+                "/api/v1/contacts.update",
+                m => m.WithContent(req.ToString())
+                .Respond("application/json", req.ToString())
+            );
+
+            APIResponse<ContactResponseBody> res = await mock.Instance.Update(accessToken, contact, teamId);
+            mock.Handler.VerifyNoOutstandingExpectation();
+            Assert.Equal(contact.ContactId, res.Body.Contact.ContactId);
+        }
+
+        [Fact]
+        public async void TestDelete()
+        {
+            String accessToken = this.RandomString();
+            String etag = this.RandomString();
+            String contactId = this.RandomString();
+            DeleteContactRequest req = new DeleteContactRequest();
+            req.ContactId = contactId;
+            req.Etag = etag;
+            MockAPI<Contacts> mock = this.MockFor<Contacts>(
+                HttpMethod.Post,
+                "/api/v1/contacts.delete",
+                m => m.WithContent(req.ToString())
+                .Respond("application/json", req.ToString())
+            );
+
+            APIResponse<dynamic> res = await mock.Instance.Delete(accessToken, contactId, etag, null);
+            mock.Handler.VerifyNoOutstandingExpectation();
+            Assert.Equal(System.Net.HttpStatusCode.OK, res.Status);
+        }
+
+        [Fact]
+        public async void TestDeleteWithTeam()
+        {
+            String accessToken = this.RandomString();
+            String teamId = this.RandomString();
+            String etag = this.RandomString();
+            String contactId = this.RandomString();
+            DeleteContactRequest req = new DeleteContactRequest();
+            req.ContactId = contactId;
+            req.TeamId = teamId;
+            req.Etag = etag;
+            MockAPI<Contacts> mock = this.MockFor<Contacts>(
+                HttpMethod.Post,
+                "/api/v1/contacts.delete",
+                m => m.WithContent(req.ToString())
+                .Respond("application/json", req.ToString())
+            );
+
+            APIResponse<dynamic> res = await mock.Instance.Delete(accessToken, contactId, etag, teamId);
+            mock.Handler.VerifyNoOutstandingExpectation();
+            Assert.Equal(System.Net.HttpStatusCode.OK, res.Status);
         }
     }
 }
