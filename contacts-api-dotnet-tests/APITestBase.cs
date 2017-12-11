@@ -3,11 +3,19 @@ using FullContact.Contacts.API;
 using System.Collections.Generic;
 using RichardSzalay.MockHttp;
 using System.Net.Http;
+using Xunit.Abstractions;
 
 namespace FullContact.Contacts.API.Tests
 {
     public class APITestBase
     {
+        protected readonly ITestOutputHelper output;
+
+        public APITestBase(ITestOutputHelper output)
+        {
+            this.output = output;
+        }
+
         protected readonly String baseUrl = "https://app.fullcontact.com";
         protected readonly String clientId = Guid.NewGuid().ToString();
         protected readonly String clientSecret = Guid.NewGuid().ToString();
@@ -28,7 +36,8 @@ namespace FullContact.Contacts.API.Tests
             config.Add("apiUrl", this.baseUrl);
             config.Add("clientId", this.clientId);
             config.Add("clientSecret", this.clientSecret);
-            MockedRequest req = mockHandler.When(method, String.Format("{0}{1}", this.baseUrl, uri));
+            this.output.WriteLine(String.Format("{0}{1}", this.baseUrl, uri));
+            MockedRequest req = mockHandler.Expect(method, String.Format("{0}{1}", this.baseUrl, uri));
 
             if(action != null) {
                 req = action.Invoke(req);

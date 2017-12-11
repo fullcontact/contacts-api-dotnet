@@ -42,11 +42,6 @@ namespace FullContact.Contacts.API
             }
 
             this._client = new HttpClient();
-            this._mapperSettings = new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore,
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
-            };
         }
 
         public API(IDictionary<String, Object> config, HttpClient client) : this(config)
@@ -62,7 +57,7 @@ namespace FullContact.Contacts.API
 
         protected async Task<APIResponse<T>> RequestAsync<T>(String accessToken, HttpMethod method, String uri, Object obj, Dictionary<String, IEnumerable<String>> headers) where T : class
         {
-            StringContent body = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
+            StringContent body = new StringContent(JsonConvert.SerializeObject(obj, Config.JsonSerializerSettings), Encoding.UTF8, "application/json");
             return await this.RequestAsync<T>(accessToken, method, uri, body, headers);
         }
 
@@ -95,7 +90,7 @@ namespace FullContact.Contacts.API
                 String content = await r.Content.ReadAsStringAsync();
                 if (!String.IsNullOrWhiteSpace(content))
                 {
-                    res.Body = JsonConvert.DeserializeObject<T>(content, this._mapperSettings);
+                    res.Body = JsonConvert.DeserializeObject<T>(content, Config.JsonSerializerSettings);
                 }    
             }
 

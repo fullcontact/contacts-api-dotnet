@@ -5,11 +5,16 @@ using System.Collections.Generic;
 using System.Net.Http;
 using FullContact.Contacts.API.Responses;
 using RichardSzalay.MockHttp;
+using Xunit.Abstractions;
 
 namespace FullContact.Contacts.API.Tests
 {
     public class AccountTest : APITestBase
     {
+        public AccountTest(ITestOutputHelper output) : base(output)
+        {
+        }
+
         [Fact]
         public async void TestGet()
         {
@@ -21,7 +26,6 @@ namespace FullContact.Contacts.API.Tests
             );
             APIResponse<Models.Account> res = await mock.Instance.Get(accessToken);
 
-            mock.Handler.VerifyNoOutstandingRequest();
             mock.Handler.VerifyNoOutstandingExpectation();
         }
     }
