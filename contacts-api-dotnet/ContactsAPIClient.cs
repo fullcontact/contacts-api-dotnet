@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FullContact.Contacts.API
 {
-    public class Client
+    public class ContactsAPIClient
     {
         private Dictionary<String, Object> config;
         private Contacts _contacts;
@@ -13,12 +13,12 @@ namespace FullContact.Contacts.API
         private Webhooks _webhooks;
         private Account _account;
 
-        public Client(String clientId, String clientSecret) 
+        public ContactsAPIClient(String clientId, String clientSecret) : this(clientId, clientSecret, null)
         {
             
         }
 
-        public Client(String clientId, String clientSecret, Dictionary<String, Object> config) 
+        public ContactsAPIClient(String clientId, String clientSecret, Dictionary<String, Object> config) 
         {
             this.config = config == null ? new Dictionary<string, object>() : config;
 
@@ -43,7 +43,7 @@ namespace FullContact.Contacts.API
             this._account = new Account(this.config);
         }
 
-        public Contacts contacts 
+        public Contacts Contacts 
         {
             get 
             {
@@ -51,7 +51,7 @@ namespace FullContact.Contacts.API
             }
         }
 
-        public OAuth oauth
+        public OAuth OAuth
         {
             get
             {
@@ -59,7 +59,7 @@ namespace FullContact.Contacts.API
             }
         }
 
-        public Tags tags
+        public Tags Tags
         {
             get
             {
@@ -67,7 +67,7 @@ namespace FullContact.Contacts.API
             }
         }
 
-        public Teams teams
+        public Teams Teams
         {
             get
             {
@@ -75,7 +75,7 @@ namespace FullContact.Contacts.API
             }
         }
 
-        public Webhooks webhooks
+        public Webhooks Webhooks
         {
             get
             {
@@ -83,7 +83,7 @@ namespace FullContact.Contacts.API
             }
         }
 
-        public Account account
+        public Account Account
         {
             get
             {

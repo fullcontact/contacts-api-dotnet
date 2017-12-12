@@ -1,0 +1,2 @@
+#!/bin/sh
+nuget push contacts-api-dotnet/bin/Debug/FullContact.Contacts.API.$1.nupkg -Source https://api.nuget.org/v3/index.json
