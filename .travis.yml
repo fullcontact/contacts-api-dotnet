@@ -6,4 +6,4 @@ dist: trusty
 install:
   - dotnet restore
 script:
-  - dotnet test
+  - dotnet test contacts-api-dotnet-tests
