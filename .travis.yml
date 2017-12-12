@@ -4,6 +4,9 @@ mono: none
 dotnet: 2.0.3
 dist: trusty
 install:
-  - dotnet restore
+- dotnet restore
 script:
-  - dotnet test contacts-api-dotnet-tests
+- dotnet test contacts-api-dotnet-tests
+notifications:
+  slack:
+    secure: ASI6YsNSdYCqWaxsdRcuT6UhxTayP5Ezeq95w4H8lqy6rFH2ZVsuMM+KPi/dFm12hXuPhDkUXGCMH3kyvW84iJTWN9EQ/H+r4IFziVmq8HMLBX6bNURhvcthBKOAI/hQut5E5eFq7Qv6hhH/5rT98TWlRxoxAqE6b/K9oX0CFayrVfkqazNjttfQ2/MizuZf43EoXEybfc3igC7xRhGbeSVvRb4T4EzBlTwSScrd+YVgS7ZIAswwVG3xSGoJ+/kKSbL/3F5DvCfTcqZGu0gXYs3kc2MiXzAW7XhBRCAL7FVmXM67T+ene/dm35oie6V38QxRez9OkrewTq0oYadkNCeUTFbNCa4Hc9TTSnLmkeq7+Cwr46C380e2bIdbLOvYdVs27bttnZwIil3rgF5NUx4NFGR2usUCQlkYZgJ15puf9BHPOVha3GMecTFCBSK8Oy83vVnMTU76SdhnYYKBUSvLs3BETz2fbGA3rSg9XlreHg48ciZJhviJKDjAPIiDQ7C4sR356jkb5H5BrCxWqlk00gaYoq9I8CyTjAn0Hk85kszhSjYbH4T6qlAOu1/k1+PYE907+Yp4yDIyyBbo8G/kq/bDWRRQTGhXCPKctznrN+W4u0nprJdI58S2VlMQ5L692T3YpJBSZHKltBvxqCCSgBAFc70fDjwohWlQCcg=
