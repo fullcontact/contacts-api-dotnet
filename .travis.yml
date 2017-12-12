@@ -1,6 +1,7 @@
 language: csharp
 solution: contacts-api-dotnet.sln
-dotnet: 1.0.1
+mono: none
+dotnet: 1.0.3
 dist: trusty
 install:
   - dotnet restore
