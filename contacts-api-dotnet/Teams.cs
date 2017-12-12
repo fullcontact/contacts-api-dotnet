@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using FullContact.Contacts.API.Requests;
 using FullContact.Contacts.API.Responses;
+using FullContact.Contacts.API.Responses.Teams;
 using FullContact.Contacts.API.Models;
 using System.Threading.Tasks;
 
@@ -18,9 +19,9 @@ namespace FullContact.Contacts.API
         {
         }
 
-        public async Task<APIResponse<Team>> Get(String accessToken)
+        public async Task<APIResponse<TeamsResponseBody>> Get(String accessToken)
         {
-            return await this.RequestAsync<Team>(
+            return await this.RequestAsync<TeamsResponseBody>(
                 accessToken,
                 HttpMethod.Post,
                 "/api/v1/teams.get",

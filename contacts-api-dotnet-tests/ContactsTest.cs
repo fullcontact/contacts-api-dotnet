@@ -334,5 +334,53 @@ namespace FullContact.Contacts.API.Tests
             mock.Handler.VerifyNoOutstandingExpectation();
             Assert.Equal(System.Net.HttpStatusCode.OK, res.Status);
         }
+
+        [Fact]
+        public async void TestManageTags()
+        {
+            String accessToken = this.RandomString();
+            List<String> contactIds = new List<String>{ this.RandomString() };
+            List<String> addTagIds = new List<String>{ this.RandomString() };
+            List<String> removeTagIds = new List<String>{ this.RandomString() };
+            ManageTagsRequest req = new ManageTagsRequest();
+            req.ContactIds = contactIds;
+            req.AddTagIds = addTagIds;
+            req.RemoveTagIds = removeTagIds;
+            MockAPI<Contacts> mock = this.MockFor<Contacts>(
+                HttpMethod.Post,
+                "/api/v1/contacts.manageTags",
+                m => m.WithContent(req.ToString())
+                      .Respond("application/json", req.ToString())
+            );
+
+            APIResponse<dynamic> res = await mock.Instance.ManageTags(accessToken, contactIds, addTagIds, removeTagIds, null);
+            mock.Handler.VerifyNoOutstandingExpectation();
+            Assert.Equal(System.Net.HttpStatusCode.OK, res.Status);
+        }
+
+        [Fact]
+        public async void TestManageTagsWithTags()
+        {
+            String accessToken = this.RandomString();
+            List<String> contactIds = new List<String> { this.RandomString() };
+            List<String> addTagIds = new List<String> { this.RandomString() };
+            List<String> removeTagIds = new List<String> { this.RandomString() };
+            String teamId = this.RandomString();
+            ManageTagsRequest req = new ManageTagsRequest();
+            req.ContactIds = contactIds;
+            req.AddTagIds = addTagIds;
+            req.RemoveTagIds = removeTagIds;
+            req.TeamId = teamId;
+            MockAPI<Contacts> mock = this.MockFor<Contacts>(
+                HttpMethod.Post,
+                "/api/v1/contacts.manageTags",
+                m => m.WithContent(req.ToString())
+                      .Respond("application/json", req.ToString())
+            );
+
+            APIResponse<dynamic> res = await mock.Instance.ManageTags(accessToken, contactIds, addTagIds, removeTagIds, teamId);
+            mock.Handler.VerifyNoOutstandingExpectation();
+            Assert.Equal(System.Net.HttpStatusCode.OK, res.Status);
+        }
     }
 }
