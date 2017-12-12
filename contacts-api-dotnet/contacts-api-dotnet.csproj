@@ -3,10 +3,28 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
     <RootNamespace>FullContact.Contacts.API</RootNamespace>
+    <PackageId>FullContact.Contacts.API</PackageId>
+    <Authors>FullContact</Authors>
+    <PackageIconUrl>http://fullcontact-static.s3.amazonaws.com/images/website/fc-logo-red.png</PackageIconUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Owners>FullContact</Owners>
+    <PackageProjectUrl>https://github.com/fullcontact/contacts-api-dotnet</PackageProjectUrl>
+    <PackageTags>fullcontact,contacts,apis,sdk,contact management</PackageTags>
+    <Title>FullContact Contacts API SDK for .NET</Title>
+    <Description>FullContact Contacts API SDK for .NET
+
+Documentation can be found at https://www.fullcontact.com/apps/docs/</Description>
+    <ReleaseVersion>1.0</ReleaseVersion>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/fullcontact/contacts-api-dotnet/master/LICENSE</PackageLicenseUrl>
+    <Summary>FullContact Contacts API SDK for .NET
+
+Documentation can be found at https://www.fullcontact.com/apps/docs/</Summary>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Responses\" />
