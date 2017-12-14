@@ -4,6 +4,7 @@ using FullContact.Contacts.API;
 using System.Collections.Generic;
 using System.Net.Http;
 using FullContact.Contacts.API.Responses;
+using FullContact.Contacts.API.Responses.Account;
 using RichardSzalay.MockHttp;
 using Xunit.Abstractions;
 
@@ -23,10 +24,10 @@ namespace FullContact.Contacts.API.Tests
             MockAPI<Account> mock = this.MockFor<Account>(
                 HttpMethod.Post,
                 "/api/v1/account.get",
-                m => m.WithContent("{}").Respond("application/json", "{ \"accountId\": \""+ accountId +"\"}")
+                m => m.WithContent("{}").Respond("application/json", "{ \"account\": { \"accountId\": \""+ accountId +"\"}}")
             );
-            APIResponse<Models.Account> res = await mock.Instance.Get(accessToken);
-            Assert.Equal(res.Body.AccountId, accountId);
+            APIResponse<AccountResponseBody> res = await mock.Instance.Get(accessToken);
+            Assert.Equal(res.Body.Account.AccountId, accountId);
             mock.Handler.VerifyNoOutstandingExpectation();
         }
     }

@@ -5,9 +5,9 @@
 
 ### Installation
 
-`PM> Install-Package FullContact.Contacts.API -Version 1.0.2`
+`PM> Install-Package FullContact.Contacts.API -Version 1.0.3`
 
-`dotnet add package FullContact.Contacts.API --version 1.0.2`
+`dotnet add package FullContact.Contacts.API --version 1.0.3`
 
 
 ### Documentation
