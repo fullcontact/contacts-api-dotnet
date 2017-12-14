@@ -20,6 +20,13 @@ namespace FullContact.Contacts.API
         {
         }
 
+        /// <summary>
+        /// Gets a list of tags by their ids.
+        /// </summary>
+        /// <returns>The list of tags.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="tagIds">Tag identifiers.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<TagsResponseBody>> Get(String accessToken, List<String> tagIds, String teamId)
         {
             return await this.RequestAsync<TagsResponseBody>(
@@ -31,16 +38,38 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Scrolls the list of the user's tags.
+        /// </summary>
+        /// <returns>The list of tags.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<TagsResponseBody>> Scroll(String accessToken, String teamId)
         {
             return await this.Scroll(accessToken, null, null, teamId, null);
         }
 
+        /// <summary>
+        /// Scrolls the list of the user's tags.
+        /// </summary>
+        /// <returns>The list of tags.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="cursor">Cursor.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<TagsResponseBody>> Scroll(String accessToken, String cursor, String teamId)
         {
             return await this.Scroll(accessToken, cursor, null, teamId, null);
         }
 
+        /// <summary>
+        /// Scrolls the list of the user's tags.
+        /// </summary>
+        /// <returns>The list of tags.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="cursor">Cursor.</param>
+        /// <param name="includeDeleted">Include deleted.</param>
+        /// <param name="teamId">Team identifier.</param>
+        /// <param name="size">Size.</param>
         public async Task<APIResponse<TagsResponseBody>> Scroll(String accessToken, String cursor, Boolean? includeDeleted, String teamId, int? size)
         {
             return await this.RequestAsync<TagsResponseBody>(
@@ -58,6 +87,13 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Creates a new tag.
+        /// </summary>
+        /// <returns>The created tag.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="tag">Tag.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<TagResponseBody>> Create(String accessToken, Tag tag, String teamId)
         {
             return await this.RequestAsync<TagResponseBody>(
@@ -73,6 +109,13 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Updates an existing tag.
+        /// </summary>
+        /// <returns>The updated tag.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="tag">Tag.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<TagResponseBody>> Update(String accessToken, Tag tag, String teamId)
         {
             return await this.RequestAsync<TagResponseBody>(
@@ -88,6 +131,14 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Deletes an existing tag.
+        /// </summary>
+        /// <returns></returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="tagId">Tag identifier.</param>
+        /// <param name="etag">Etag.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<dynamic>> Delete(String accessToken, String tagId, String etag, String teamId)
         {
             return await this.RequestAsync<dynamic>(

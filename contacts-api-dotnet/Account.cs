@@ -17,6 +17,11 @@ namespace FullContact.Contacts.API
         {
         }
 
+        /// <summary>
+        /// Gets the Account and Profile information for the current user.
+        /// </summary>
+        /// <returns>The account</returns>
+        /// <param name="accessToken">Access token.</param>
         public async Task<APIResponse<Models.Account>> Get(String accessToken) {
             return await this.RequestAsync<Models.Account>(
                 accessToken,

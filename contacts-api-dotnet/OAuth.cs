@@ -18,6 +18,13 @@ namespace FullContact.Contacts.API
         {
         }
 
+        /// <summary>
+        /// Returns the URL to redirect a user to for the Authorization step of the OAuth process.
+        /// </summary>
+        /// <returns>The authorization URL.</returns>
+        /// <param name="scopes">Scopes.</param>
+        /// <param name="redirectUri">Redirect URI.</param>
+        /// <param name="state">State.</param>
         public String getAuthorizationUrl(List<String> scopes, String redirectUri, String state) {
             return String.Format(
                 "{0}/oauth/authorize?client_id={1}&scopes={2}&redirect_uri={3}&state={4}",
@@ -29,6 +36,12 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// "Exchanges the code returned from a the authorization redirect for access token and refresh token.
+        /// </summary>
+        /// <returns>Authorization</returns>
+        /// <param name="code">Code.</param>
+        /// <param name="redirectUri">Redirect URI.</param>
         public async Task<APIResponse<Authorization>> ExchangeAuthCode(String code, String redirectUri) 
         {
             Dictionary<String, String> form = new Dictionary<String, String> {
@@ -47,6 +60,11 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Obtains a new access token from a refresh token.
+        /// </summary>
+        /// <returns>The access token.</returns>
+        /// <param name="refreshToken">Refresh token.</param>
         public async Task<APIResponse<Authorization>> RefreshAccessToken(String refreshToken)
         {
             Dictionary<String, String> form = new Dictionary<String, String> {
@@ -64,6 +82,11 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// "Checks if an access token is still valid"
+        /// </summary>
+        /// <returns></returns>
+        /// <param name="accessToken">Access token.</param>
         public async Task<APIResponse<dynamic>> VerifyAccessToken(String accessToken)
         {
             Dictionary<String, String> form = new Dictionary<String, String> {

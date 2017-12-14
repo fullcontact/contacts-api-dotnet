@@ -20,6 +20,14 @@ namespace FullContact.Contacts.API
         {
         }
 
+        /// <summary>
+        /// Gets a list of webhooks by their ids.
+        /// </summary>
+        /// <returns>The list of webhooks.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="webhookIds">Webhook identifiers.</param>
+        /// <param name="page">Page.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<WebhooksResponseBody>> Get(String accessToken, List<String> webhookIds, int? page, String teamId)
         {
             return await this.RequestAsync<WebhooksResponseBody>(
@@ -31,6 +39,15 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Searches the list of webhooks.
+        /// </summary>
+        /// <returns>The list of matching webhooks.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="url">URL.</param>
+        /// <param name="triggerIds">Trigger identifiers.</param>
+        /// <param name="page">Page.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<WebhooksResponseBody>> Search(String accessToken, String url, List<String> triggerIds, int? page, String teamId)
         {
             return await this.RequestAsync<WebhooksResponseBody>(
@@ -42,6 +59,14 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Creates a new webhook.
+        /// </summary>
+        /// <returns>The created webhook.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="url">URL.</param>
+        /// <param name="triggerIds">Trigger identifiers.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<WebhookResponseBody>> Create(String accessToken, String url, List<String> triggerIds, String teamId)
         {
             return await this.RequestAsync<WebhookResponseBody>(
@@ -53,6 +78,13 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Deletes an existing webhook.
+        /// </summary>
+        /// <returns></returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="webhookId">Webhook identifier.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<dynamic>> Delete(String accessToken, String webhookId, String teamId)
         {
             return await this.RequestAsync<dynamic>(
@@ -64,6 +96,14 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Gets a list of batches for a webhook id and batch id.
+        /// </summary>
+        /// <returns>The batches.</returns>
+        /// <param name="accessToken">Access token.</param>
+        /// <param name="webhookId">Webhook identifier.</param>
+        /// <param name="batchId">Batch identifier.</param>
+        /// <param name="teamId">Team identifier.</param>
         public async Task<APIResponse<dynamic>> GetBatches(String accessToken, String webhookId, String batchId, String teamId)
         {
             return await this.RequestAsync<dynamic>(
@@ -75,6 +115,11 @@ namespace FullContact.Contacts.API
             );
         }
 
+        /// <summary>
+        /// Gets a list of available triggers for creating a new webhook.
+        /// </summary>
+        /// <returns>The list of triggers.</returns>
+        /// <param name="accessToken">Access token.</param>
         public async Task<APIResponse<TriggersResponseBody>> GetTriggers(String accessToken)
         {
             return await this.RequestAsync<TriggersResponseBody>(

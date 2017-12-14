@@ -4523,16 +4523,16 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/Users/mattdelliott/Development/FullContact/contacts-api-dotnet/contacts-api-dotnet/contacts-api-dotnet.csproj",
-      "projectName": "FullContact.Contacts.API",
+      "projectName": "contacts-api-dotnet",
       "projectPath": "/Users/mattdelliott/Development/FullContact/contacts-api-dotnet/contacts-api-dotnet/contacts-api-dotnet.csproj",
       "packagesPath": "/Users/mattdelliott/.nuget/packages/",
-      "outputPath": "/Users/mattdelliott/Development/FullContact/contacts-api-dotnet/contacts-api-dotnet/obj/",
+      "outputPath": "/Users/mattdelliott/Development/FullContact/contacts-api-dotnet/contacts-api-dotnet/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/mattdelliott/.nuget/NuGet/NuGet.Config"
+        "/Users/mattdelliott/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard1.4"
@@ -4555,6 +4555,7 @@
       "netstandard1.4": {
         "dependencies": {
           "NETStandard.Library": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "1.6.1",
             "autoReferenced": true

@@ -19,6 +19,11 @@ namespace FullContact.Contacts.API
         {
         }
 
+        /// <summary>
+        /// Gets a list of teams that the user belongs to.
+        /// </summary>
+        /// <returns>The list of teams.</returns>
+        /// <param name="accessToken">Access token.</param>
         public async Task<APIResponse<TeamsResponseBody>> Get(String accessToken)
         {
             return await this.RequestAsync<TeamsResponseBody>(
