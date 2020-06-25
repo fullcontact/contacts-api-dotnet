@@ -22,7 +22,15 @@ Documentation can be found at https://www.fullcontact.com/apps/docs/</Descriptio
 Documentation can be found at https://www.fullcontact.com/apps/docs/</Summary>
     <PackOnBuild>true</PackOnBuild>
     <PackageVersion>1.0.3</PackageVersion>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
